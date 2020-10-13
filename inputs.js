@@ -13,7 +13,10 @@ function Input(props) {
         classNames = `${classNames} input-${props.value}`
     }
     return (
-            <input className={classNames} disabled={props.disabled} placeholder={props.placeholder} />
+            <input 
+            className={classNames} 
+            disabled={props.disabled} 
+            placeholder={props.placeholder} />
     )
 
 }
