@@ -6807,7 +6807,7 @@ if ("development" !== "production") {
       }
 
       var eventName = 'on' + eventNameSuffix;
-      var isSupported = eventName in document;
+      var isSupported = (eventName in document);
 
       if (!isSupported) {
         var element = document.createElement('div');
@@ -28285,17 +28285,76 @@ if ("development" === 'production') {
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
-},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"script.js":[function(require,module,exports) {
+},{"./cjs/react-dom.development.js":"node_modules/react-dom/cjs/react-dom.development.js"}],"inputs.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function Input(props) {
+  var classNames = props.helperText ? "input input-".concat(props.helperText) : 'input';
+
+  if (props.error) {
+    classNames = "".concat(classNames, " input-").concat(props.error);
+  }
+
+  if (props.size) {
+    classNames = "".concat(classNames, " input-").concat(props.size);
+  }
+
+  if (props.value) {
+    classNames = "".concat(classNames, " input-").concat(props.value);
+  }
+
+  return /*#__PURE__*/_react.default.createElement("input", {
+    className: classNames,
+    disabled: props.disabled,
+    placeholder: props.placeholder
+  });
+}
+
+var _default = Input;
+exports.default = _default;
+},{"react":"node_modules/react/index.js"}],"script.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = _interopRequireDefault(require("react-dom"));
 
+var _inputs = _interopRequireDefault(require("./inputs.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom.default.render(_react.default.createElement("h1", null, "Hello Onja"), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+function App() {
+  return /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("h1", null, "Inputs"), "<Input />", /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    type: "text",
+    placeholder: "Placeholder"
+  })), "<Input error />", /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", {
+    className: "error"
+  }, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    type: "text",
+    placeholder: "Placeholder",
+    error: "error"
+  })), "<Input disabled />", /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    type: "text",
+    disabled: true,
+    placeholder: "Placeholder"
+  })), "<Input helperText=\"some interesting text\" />", /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    type: "text",
+    helperText: "some interesting text",
+    placeholder: "Placeholder"
+  }), "Some interesting text"));
+}
+
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./inputs.js":"inputs.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28323,7 +28382,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65015" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54582" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -28499,5 +28558,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","script.js"], null)
+},{}]},{},["../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","script.js"], null)
 //# sourceMappingURL=/script.75da7f30.js.map
