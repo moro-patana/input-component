@@ -37,3 +37,8 @@ fieldset {
 .input.input-helperText {
     border: 2px solid red;
 }
+.textError {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
