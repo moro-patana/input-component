@@ -28346,11 +28346,22 @@ function App() {
     type: "text",
     disabled: true,
     placeholder: "Placeholder"
-  })), "<Input helperText=\"some interesting text\" />", /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "textError"
+  }, /*#__PURE__*/_react.default.createElement("fieldset", null, "<Input helperText=\"some interesting text\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
     type: "text",
     helperText: "some interesting text",
     placeholder: "Placeholder"
-  }), "Some interesting text"));
+  }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text")), /*#__PURE__*/_react.default.createElement("fieldset", null, "<Input helperText=\"some interesting text\" error/>", /*#__PURE__*/_react.default.createElement("label", {
+    className: "error"
+  }, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    type: "text",
+    helperText: "some interesting text",
+    placeholder: "Placeholder",
+    error: true
+  }), /*#__PURE__*/_react.default.createElement("p", {
+    className: "error"
+  }, "Some interesting text"))));
 }
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
