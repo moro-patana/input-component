@@ -39,6 +39,26 @@ function App() {
                     </p>
                 </fieldset>
             </div>
+            {`<Input startIcon/>`}
+            <fieldset>
+                <label>Label</label>
+                <Input type="text" startIcon placeholder="Placeholder" />
+            </fieldset>
+            {`<Input value="text" />`}
+            <fieldset>
+                <label>Label</label>
+                <Input type="text" value="Text" />
+            </fieldset>
+            {`<Input size="sm" />`}
+            <fieldset>
+                <label>Label</label>
+                <Input type="text" size="sm" startIcon placeholder="Placeholder" />
+            </fieldset>
+            {`<Input size="md" />`}
+            <fieldset>
+                <label>Label</label>
+                <Input type="text" size="md" startIcon placeholder="Placeholder" />
+            </fieldset>
 
 
 
