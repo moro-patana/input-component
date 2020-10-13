@@ -42,3 +42,24 @@ fieldset {
     flex-direction: row;
     justify-content: space-between;
 }
+.input-startIcon::before {
+    content: url("./phone.svg");
+}
+.input.input-sm {
+    width: 200px;
+    height: 40px;
+    left: 319px;
+    top: 1077px;
+    border: 1px solid #828282;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.input.input-md {
+    width: 200px;
+    height: 56px;
+    left: 676px;
+    top: 1077px;
+    border: 1px solid #828282;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
