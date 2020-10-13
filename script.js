@@ -21,12 +21,24 @@ function App() {
                 <label>Label</label>
                 <Input type="text" disabled placeholder="Placeholder" />
             </fieldset>
-            {`<Input helperText="some interesting text" />`}
-            <fieldset>
-                <label>Label</label>
-                <Input type="text" helperText="some interesting text" placeholder="Placeholder" />
-                Some interesting text
-            </fieldset>
+            <div className="textError">
+                <fieldset>
+                {`<Input helperText="some interesting text" />`}
+                    <label>Label</label>
+                    <Input type="text" helperText="some interesting text" placeholder="Placeholder" />
+                    <p>
+                        Some interesting text
+                    </p>
+                </fieldset>
+                <fieldset>
+                {`<Input helperText="some interesting text" error/>`}
+                    <label className="error">Label</label>
+                    <Input type="text" helperText="some interesting text" placeholder="Placeholder" error/>
+                    <p className="error">
+                        Some interesting text
+                    </p>
+                </fieldset>
+            </div>
 
 
 
