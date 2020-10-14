@@ -28362,7 +28362,9 @@ function App() {
     placeholder: "Placeholder"
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "field"
-  }, "<Input error/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+  }, "<Input error/>", /*#__PURE__*/_react.default.createElement("label", {
+    className: "error"
+  }, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
     error: true,
     placeholder: "Placeholder"
   })), /*#__PURE__*/_react.default.createElement("div", {
