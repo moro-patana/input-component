@@ -1,10 +1,25 @@
-fieldset {
+ h1 {
+    font-family: cursive;
+    font-size: 48px;
+    padding: 1rem;
+    color: brown;
+ }
+ #root {
+     padding: 1rem;
+ }
+ .field {
     display: flex;
     flex-direction: column;
-    border: none;
+    padding: 1rem;
 }
+.inputError,
+.icon,
+.inputsize {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
 .input {
-    cursor: pointer;
     width: 200px;
     height: 56px;
     left: 317px;
@@ -12,54 +27,61 @@ fieldset {
     border: 1px solid #828282;
     box-sizing: border-box;
     border-radius: 8px;
+    cursor: pointer;
+    padding: 1rem;
 }
 .input:hover {
     border: 1px solid #333333;
 }
 .input:focus {
+    outline: none;
     border: 1px solid #2962FF;
 }
-.input.input-error,
-.input.input-error:focus {
+
+.input-error {
     border: 1px solid #D32F2F;
 }
-.input.input-error:hover {
-    border: 1px solid #333333;
-}
-.error {
-    color: red;
-}
-.input:disabled {
+.input-disabled {
     background: #F2F2F2;
     border: 1px solid #E0E0E0;
     pointer-events: none;
 }
 .input.input-helperText {
-    border: 2px solid red;
+    border: 1px solid #828282;
 }
-.textError {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.error {
+    color: #D32F2F ;
 }
-.input-startIcon::before {
-    content: url("./phone.svg");
+.input-startIcon {
+    background-image: url("./phone.svg");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: top 50% left 10%;
+    padding-left: 3rem;
+}
+.input-endIcon {
+    background-image: url("./lock.svg");
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: top 50% right 10%;
+}
+.input.input-value {
+    border: 1px solid #828282;
+    color: #333333;
 }
 .input.input-sm {
     width: 200px;
     height: 40px;
-    left: 319px;
-    top: 1077px;
-    border: 1px solid #828282;
-    box-sizing: border-box;
-    border-radius: 8px;
 }
 .input.input-md {
     width: 200px;
     height: 56px;
-    left: 676px;
-    top: 1077px;
-    border: 1px solid #828282;
-    box-sizing: border-box;
-    border-radius: 8px;
+}
+.input-fullwidth {
+    width: 1031px;
+    height: 56px;
+}
+.input-multiline {
+    max-width: 200px;
+    height: 150px;
 }
