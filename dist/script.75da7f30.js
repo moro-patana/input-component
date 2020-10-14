@@ -28301,71 +28301,149 @@ function Input(props) {
   var classNames = props.helperText ? "input input-".concat(props.helperText) : 'input';
 
   if (props.error) {
-    classNames = "".concat(classNames, " input-").concat(props.error);
+    classNames = "".concat(classNames, " input-error");
   }
 
   if (props.size) {
     classNames = "".concat(classNames, " input-").concat(props.size);
   }
 
+  if (props.disabled) {
+    classNames = "".concat(classNames, " input-disabled");
+  }
+
+  if (props.startIcon) {
+    classNames = "".concat(classNames, " input-startIcon");
+  }
+
+  if (props.endIcon) {
+    classNames = "".concat(classNames, " input-endIcon");
+  }
+
   if (props.value) {
     classNames = "".concat(classNames, " input-").concat(props.value);
   }
 
+  if (props.fullwidth) {
+    classNames = "".concat(classNames, " input-fullwidth");
+  }
+
+  if (props.multiline) {
+    classNames = "".concat(classNames, " input-multiline");
+  }
+
   return /*#__PURE__*/_react.default.createElement("input", {
     className: classNames,
-    disabled: props.disabled,
+    value: props.value,
     placeholder: props.placeholder
   });
 }
 
 var _default = Input;
 exports.default = _default;
-},{"react":"node_modules/react/index.js"}],"script.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js"}],"App.js":[function(require,module,exports) {
 "use strict";
 
-var _react = _interopRequireDefault(require("react"));
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 
-var _reactDom = _interopRequireDefault(require("react-dom"));
+var _react = _interopRequireDefault(require("react"));
 
 var _inputs = _interopRequireDefault(require("./inputs.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
-  return /*#__PURE__*/_react.default.createElement("main", null, /*#__PURE__*/_react.default.createElement("h1", null, "Inputs"), "<Input />", /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
-    type: "text",
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input error/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
     placeholder: "Placeholder"
-  })), "<Input error />", /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", {
-    className: "error"
-  }, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
-    type: "text",
-    placeholder: "Placeholder",
-    error: "error"
-  })), "<Input disabled />", /*#__PURE__*/_react.default.createElement("fieldset", null, /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
-    type: "text",
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input error/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    error: true,
+    placeholder: "Placeholder"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input disabled/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
     disabled: true,
     placeholder: "Placeholder"
   })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "textError"
-  }, /*#__PURE__*/_react.default.createElement("fieldset", null, "<Input helperText=\"some interesting text\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
-    type: "text",
-    helperText: "some interesting text",
+    className: "inputError"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input helperText=\"Some interesting text/>\"", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    helperText: "Some interesting text/>",
     placeholder: "Placeholder"
-  }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text")), /*#__PURE__*/_react.default.createElement("fieldset", null, "<Input helperText=\"some interesting text\" error/>", /*#__PURE__*/_react.default.createElement("label", {
+  }), /*#__PURE__*/_react.default.createElement("p", null, "Some interesting text")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input helperText=\"Some interesting text/>\"", /*#__PURE__*/_react.default.createElement("label", {
     className: "error"
   }, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
-    type: "text",
-    helperText: "some interesting text",
+    helperText: "Some interesting text/>",
     placeholder: "Placeholder",
     error: true
   }), /*#__PURE__*/_react.default.createElement("p", {
     className: "error"
-  }, "Some interesting text"))));
+  }, "Some interesting text"))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "icon"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input startIcon />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    startIcon: true,
+    placeholder: "Placeholder"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input endIcon />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    endIcon: true,
+    placeholder: "Placeholder"
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input value=\"Text\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    value: "Text"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "inputsize"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input size=\"sm />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    size: "sm",
+    placeholder: "Placeholder"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input size=\"md\" />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    size: "md",
+    placeholder: "Placeholder"
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input fullwidth />", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    fullwidth: true,
+    placeholder: "Placeholder"
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: "field"
+  }, "<Input multiline row=\"4\"/>", /*#__PURE__*/_react.default.createElement("label", null, "Label"), /*#__PURE__*/_react.default.createElement(_inputs.default, {
+    multiline: true,
+    row: "4",
+    placeholder: "Placeholder"
+  })));
 }
 
-_reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('root'));
-},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./inputs.js":"inputs.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var _default = App;
+exports.default = _default;
+},{"react":"node_modules/react/index.js","./inputs.js":"inputs.js"}],"script.js":[function(require,module,exports) {
+"use strict";
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+var _App = _interopRequireDefault(require("./App.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_reactDom.default.render( /*#__PURE__*/_react.default.createElement(_App.default, null), document.getElementById('root'));
+},{"react":"node_modules/react/index.js","react-dom":"node_modules/react-dom/index.js","./App.js":"App.js"}],"../../AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -28393,7 +28471,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54582" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52510" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
