@@ -11,7 +11,7 @@ function App() {
             </div>
             <div className="field">
                 {`<Input error/>`}
-                <label>Label</label>
+                <label className="error">Label</label>
                 <Input error placeholder="Placeholder"/>
             </div>
             <div className="field">
