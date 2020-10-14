@@ -97,8 +97,7 @@ label {
     height: 56px;
 }
 .input-fullwidth {
-    width: 1031px;
-    height: 56px;
+    width: 100%;
 }
 .input-multiline {
     max-width: 200px;
