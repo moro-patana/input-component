@@ -9,16 +9,19 @@ function App() {
                 <label>Label</label>
                 <Input placeholder="Placeholder"/>
             </div>
+
             <div className="field">
                 {`<Input error/>`}
                 <label className="error">Label</label>
                 <Input error placeholder="Placeholder"/>
             </div>
+
             <div className="field">
                 {`<Input disabled/>`}
                 <label>Label</label>
                 <Input disabled placeholder="Placeholder"/>
             </div>
+
             <div className="inputError">
                 <div className="field">
                     {`<Input helperText="Some interesting text/>"`}
@@ -33,6 +36,7 @@ function App() {
                     <p className="error">Some interesting text</p>
                 </div>
             </div>
+
             <div className="icon">
                 <div className="field">
                     {`<Input startIcon />`}
@@ -45,11 +49,13 @@ function App() {
                     <Input endIcon placeholder="Placeholder"/>
                 </div>
             </div>
+
             <div className="field">
                 {`<Input value="Text" />`}
                 <label>Label</label>
                 <Input value="Text"/>
             </div>
+
             <div className="inputsize">
                 <div className="field">
                     {`<Input size="sm />`}
@@ -62,11 +68,13 @@ function App() {
                     <Input size="md" placeholder="Placeholder"/>
                 </div>
             </div>
+
             <div className="field">
                 {`<Input fullwidth />`}
                 <label>Label</label>
                 <Input fullwidth placeholder="Placeholder"/>
             </div>
+            
             <div className="field">
                 {`<Input multiline row="4"/>`}
                 <label>Label</label>
