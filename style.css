@@ -1,16 +1,30 @@
+ body {
+     margin: 0;
+ }
  h1 {
     font-family: cursive;
-    font-size: 48px;
+    font-size: 60px;
     padding: 1rem;
     color: brown;
+    position: absolute;
+    top: 0;
+    left: 30%;
+    margin: 0;
+    font-style: italic;
  }
  #root {
      padding: 1rem;
+     background-color: antiquewhite;
+     padding-top: 20%;
  }
  .field {
     display: flex;
     flex-direction: column;
     padding: 1rem;
+}
+label {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
 }
 .inputError,
 .icon,
